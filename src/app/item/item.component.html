@@ -1,0 +1,19 @@
+ <div> 
+    <ul *ngFor="let i of items; let x = index;" [attr.data-index]="x">
+      <li class="row">
+        <input type="text" [(ngModel)]="i.title" name="{{'i' + x}}" (ngModelChange)="save.emit(true)" class="form-control col">
+        <select  class="form-control col" [(ngModel)]="i.status" [ngClass]="{
+            'assigned': i.status == 'assigned',
+            'in-progress': i.status == 'inprogress',
+            'done': i.status == 'done'
+    }" (ngModelChange)="save.emit(true)" name="status">
+            <option value="assigned" selected>Assigned</option>
+            <option value="inprogress">In Progress</option>
+            <option value="done">Done</option>
+        </select>
+        <button class="btn btn-sm btn-outline-danger remove" (click)="removeItem(x)">x</button>
+
+    </li>
+    </ul>
+</div>
+  <button class="btn btn-sm btn-outline-primary" (click) = "newItem()">+</button>

@@ -1,0 +1,20 @@
+ul{
+    list-style-type: none;
+    border-bottom: 1px solid gray;
+    padding: 0.5rem 0px;
+}
+.remove{
+    float: right;
+}
+.done{
+    border-color: green;
+}
+.in-progress{
+    border-color: blue;
+}
+.assigned{
+    border-color: yellow;
+}
+input , select, button{
+    margin-left: 2px;
+}

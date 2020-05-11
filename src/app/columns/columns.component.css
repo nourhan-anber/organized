@@ -1,0 +1,12 @@
+button{
+    display: inline;
+    float: right;
+}
+h2{
+    display: inline;
+}
+.title{
+    border-bottom: grey 1px solid;
+    padding: 0.5rem 0;
+
+}
